@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form Data</title>
+         <style>
+         *{
+            box-sizing: border-box;   
+         }   
+         body {
+             font-family:Verdana, Geneva, Tahoma, sans-serif ;
+             font-size: 17px;
+             padding: 8px;
+         }
+         .container {
+             background-color: #f2f2f2;
+             padding: 15px 20px 15px 20px;  
+             border: 1px  solid lightgray;
+             border-radius: 4px;  /*For edges curves of borders*/
+         }
+        input[type="text"],input[type="email"],input[type="number"],input[type="password"],input[type="date"],input[type="tel"],
+        select,textarea{
+            width: 100%;
+            padding: 5px;
+            border: 1px white;
+            border-radius:5px;
+            margin:5px;
+        }
+        fieldset{
+            background-color: white;
+              border: 1px white;
+              border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="submit"] {
+            color: white;
+            background-color: rgb(41, 204, 204);
+            text-align: center;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor:pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: greenyellow;
+        }
+         </style>
+</head>
+<body>
+      <form class="container" action="jenjkf.php">
+          <h1>Payment Form</h1> <hr>
+          <h2>User Information</h2>
+          <p> 
+            Name:<input type="text" name="name" id="we" required placeholder="xyz"><br>
+            </p>
+          <!-- name tag is used for linking with server -->
+          <p>
+              <fieldset>                        <!--For the box of gender -->
+             <legend>GENDER</legend>            <!--Legend for the heading along the box-->    
+              Male <input type="radio" name="gender" id="male" required><br>
+              Female <input type="radio" name="gender" id="female" required>
+            </fieldset>
+          </p>
+          <p>
+              Adrress:<textarea name="address" cols="50" rows="5" id="address" required placeholder="Enter your address"></textarea>
+          </p>
+          <p>
+               Email:<input type="email" name="email" id="email" required placeholder="abcd123@gmail.com">
+               <p>
+                   Pincode:<input type="number" name="pincode" id="pincode" required placeholder="123456">
+               </p>
+               <p>
+                   Contact NO.:<input type="tel" name="telephone" id="telephone" required>
+               </p>
+          <hr>
+          <p>
+              <h2>Payment Information</h2>
+      Card Type:<select name="card_type" id="card_type" required>
+                   
+                  <option value="" selected>---Select a Card Type---</option>
+                  <option value="Mastercard">Mastercard</option>
+                  <option value="VISA">VISA</option>
+                  <option value="RuPay">RuPay</option>
+                </select>
+          </p>
+          <p>
+              Card NO.*: <input type="number" name="card_number" id="card_numbrer" required placeholder="XXXX XXXX XXXX XXXX">
+          </p>
+          <p>
+              Expiry Date:* <input type="date" name="exp_date" id="exp-date">
+          </p>
+          <p>
+              CVV:*<input type="password" name="cvv" id="cvv" required>
+          </p>
+          <input type="submit" value="Pay Now"> 
+         
+      </form>
+</body>
+</html>
